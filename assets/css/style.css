@@ -1,0 +1,349 @@
+:root {
+    --bg: #f6f8fb;
+    --surface: #ffffff;
+    --surface-alt: #eef3f9;
+    --text: #142033;
+    --muted: #5f6f85;
+    --border: rgba(20, 32, 51, 0.1);
+    --primary: #1e4d8f;
+    --primary-dark: #143867;
+    --shadow: 0 18px 45px rgba(19, 42, 79, 0.08);
+    --radius-lg: 24px;
+    --radius-md: 18px;
+    --radius-sm: 12px;
+    --max-width: 1180px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(180deg, #f9fbfd 0%, #f3f6fa 100%);
+    color: var(--text);
+    line-height: 1.65;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    backdrop-filter: blur(16px);
+    background: rgba(246, 248, 251, 0.88);
+    border-bottom: 1px solid rgba(20, 32, 51, 0.08);
+}
+
+.nav {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1.1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    color: var(--muted);
+    font-size: 0.96rem;
+}
+
+.nav-links a:hover {
+    color: var(--text);
+}
+
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 1.5rem 5rem;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.8fr);
+    gap: 2rem;
+    align-items: stretch;
+    padding: 3rem 0 2rem;
+}
+
+.hero-copy,
+.hero-panel,
+.card,
+.info-card,
+.project-item,
+.contact-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+}
+
+.hero-copy {
+    padding: 3rem;
+}
+
+.hero-panel {
+    padding: 1.5rem;
+    display: grid;
+    gap: 1rem;
+    align-content: start;
+    background: linear-gradient(180deg, #f8fbff 0%, #edf3fb 100%);
+}
+
+.eyebrow {
+    margin: 0 0 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: clamp(2.8rem, 5vw, 4.6rem);
+    line-height: 1.05;
+    margin-bottom: 1rem;
+    letter-spacing: -0.04em;
+}
+
+h2 {
+    font-size: clamp(1.9rem, 3vw, 2.7rem);
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.03em;
+}
+
+h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+.pi {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.tagline,
+.section-heading p,
+.section > div > p,
+.project-item p,
+.contact-card p,
+.info-card li,
+.publication-list li {
+    color: var(--muted);
+}
+
+.tagline {
+    max-width: 52rem;
+    font-size: 1.1rem;
+}
+
+.cta-group {
+    display: flex;
+    gap: 0.9rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0.85rem 1.3rem;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: #fff;
+    box-shadow: 0 12px 24px rgba(30, 77, 143, 0.22);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.btn-secondary {
+    border: 1px solid rgba(30, 77, 143, 0.18);
+    background: #fff;
+    color: var(--primary);
+}
+
+.hero-stat {
+    padding: 1rem 0.25rem;
+    border-bottom: 1px solid rgba(20, 32, 51, 0.08);
+}
+
+.hero-stat:last-child {
+    border-bottom: 0;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+}
+
+.section {
+    padding: 2.25rem 0;
+}
+
+.section-heading {
+    max-width: 760px;
+    margin-bottom: 1.5rem;
+}
+
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.card,
+.info-card,
+.project-item,
+.contact-card {
+    padding: 1.5rem;
+}
+
+.card {
+    min-height: 220px;
+}
+
+.split-section {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+    gap: 1.25rem;
+    align-items: start;
+}
+
+.info-card ul,
+.publication-list {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.project-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.project-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.75fr);
+    gap: 1.25rem;
+    align-items: start;
+}
+
+.project-type {
+    margin-bottom: 0.35rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+}
+
+.contact-section {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+    gap: 1.25rem;
+    align-items: stretch;
+}
+
+.contact-card {
+    background: linear-gradient(180deg, #ffffff 0%, #f6f9fd 100%);
+}
+
+.site-footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+@media (max-width: 980px) {
+    .hero,
+    .split-section,
+    .contact-section,
+    .project-item {
+        grid-template-columns: 1fr;
+    }
+
+    .research-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 720px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 0.75rem 1rem;
+    }
+
+    .hero-copy {
+        padding: 2rem;
+    }
+
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 1.5rem 1rem 4rem;
+    }
+}
