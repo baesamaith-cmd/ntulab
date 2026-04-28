@@ -1,17 +1,17 @@
 :root {
-    --bg: #f6f8fb;
+    --bg: #f8fafd;
     --surface: #ffffff;
-    --surface-alt: #eef3f9;
-    --text: #142033;
-    --muted: #5f6f85;
-    --border: rgba(20, 32, 51, 0.1);
-    --primary: #1e4d8f;
-    --primary-dark: #143867;
-    --shadow: 0 18px 45px rgba(19, 42, 79, 0.08);
-    --radius-lg: 24px;
-    --radius-md: 18px;
-    --radius-sm: 12px;
-    --max-width: 1180px;
+    --surface-alt: #f1f4f9;
+    --text: #1a2333;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --primary: #1e40af;
+    --primary-dark: #1e3a8a;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --radius-lg: 16px;
+    --radius-md: 12px;
+    --radius-sm: 8px;
+    --max-width: 1080px;
 }
 
 * {
@@ -24,11 +24,11 @@ html {
 
 body {
     margin: 0;
-    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: linear-gradient(180deg, #f9fbfd 0%, #f3f6fa 100%);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f8fafd;
     color: var(--text);
-    line-height: 1.65;
-}
+    line-height: 1.5;
+    font-size: 16px;}
 
 a {
     color: inherit;
@@ -90,10 +90,10 @@ main {
 
 .hero {
     display: grid;
-    grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.85fr);
-    gap: 1.5rem;
-    align-items: stretch;
-    padding: 3.25rem 0 1.25rem;
+    grid-template-columns: 1fr 340px;
+    gap: 2rem;
+    align-items: start;
+    padding: 4rem 0 2rem;
 }
 
 .hero-copy,
