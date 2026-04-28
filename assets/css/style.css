@@ -90,10 +90,10 @@ main {
 
 .hero {
     display: grid;
-    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.8fr);
-    gap: 2rem;
+    grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.85fr);
+    gap: 1.5rem;
     align-items: stretch;
-    padding: 3rem 0 2rem;
+    padding: 3.25rem 0 1.25rem;
 }
 
 .hero-copy,
@@ -101,7 +101,8 @@ main {
 .card,
 .info-card,
 .project-item,
-.contact-card {
+.contact-card,
+.highlight-band {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
@@ -109,7 +110,7 @@ main {
 }
 
 .hero-copy {
-    padding: 3rem;
+    padding: 3.25rem;
 }
 
 .hero-panel {
@@ -132,20 +133,22 @@ main {
 h1,
 h2,
 h3,
-p {
+p,
+ul {
     margin-top: 0;
 }
 
 h1 {
-    font-size: clamp(2.8rem, 5vw, 4.6rem);
-    line-height: 1.05;
+    font-size: clamp(2.9rem, 5vw, 4.8rem);
+    line-height: 1.02;
     margin-bottom: 1rem;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.045em;
+    max-width: 11ch;
 }
 
 h2 {
-    font-size: clamp(1.9rem, 3vw, 2.7rem);
-    line-height: 1.15;
+    font-size: clamp(1.95rem, 3vw, 2.75rem);
+    line-height: 1.12;
     margin-bottom: 0.75rem;
     letter-spacing: -0.03em;
 }
@@ -153,6 +156,7 @@ h2 {
 h3 {
     font-size: 1.15rem;
     margin-bottom: 0.5rem;
+    line-height: 1.3;
 }
 
 .pi {
@@ -168,20 +172,32 @@ h3 {
 .project-item p,
 .contact-card p,
 .info-card li,
-.publication-list li {
+.publication-list li,
+.hero-note,
+.highlight-label,
+.text-link {
     color: var(--muted);
 }
 
 .tagline {
-    max-width: 52rem;
-    font-size: 1.1rem;
+    max-width: 44rem;
+    font-size: 1.12rem;
 }
 
-.cta-group {
+.hero-actions {
+    margin-top: 2rem;
+}
+
+.hero-note {
+    margin: 0.85rem 0 0;
+    font-size: 0.95rem;
+}
+
+.cta-group,
+.contact-actions {
     display: flex;
     gap: 0.9rem;
     flex-wrap: wrap;
-    margin-top: 2rem;
 }
 
 .btn {
@@ -224,22 +240,36 @@ h3 {
     border-bottom: 0;
 }
 
-.stat-label {
+.stat-label,
+.highlight-label {
     display: block;
     font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--muted);
     margin-bottom: 0.5rem;
 }
 
 .section {
-    padding: 2.25rem 0;
+    padding: 2.5rem 0;
 }
 
 .section-heading {
     max-width: 760px;
     margin-bottom: 1.5rem;
+}
+
+.highlight-band {
+    margin: 0 0 1rem;
+    padding: 1.15rem 1.4rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    background: linear-gradient(180deg, #ffffff 0%, #f4f8fd 100%);
+}
+
+.highlight-item strong {
+    display: block;
+    line-height: 1.4;
 }
 
 .research-grid {
@@ -261,7 +291,7 @@ h3 {
 
 .split-section {
     display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+    grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
     gap: 1.25rem;
     align-items: start;
 }
@@ -272,6 +302,15 @@ h3 {
     padding-left: 1.1rem;
 }
 
+.publication-list {
+    margin-bottom: 1rem;
+}
+
+.text-link {
+    font-weight: 600;
+    color: var(--primary);
+}
+
 .project-list {
     display: grid;
     gap: 1rem;
@@ -279,7 +318,7 @@ h3 {
 
 .project-item {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.75fr);
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 0.8fr);
     gap: 1.25rem;
     align-items: start;
 }
@@ -295,7 +334,7 @@ h3 {
 
 .contact-section {
     display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
     gap: 1.25rem;
     align-items: stretch;
 }
@@ -315,7 +354,8 @@ h3 {
     .hero,
     .split-section,
     .contact-section,
-    .project-item {
+    .project-item,
+    .highlight-band {
         grid-template-columns: 1fr;
     }
 
